@@ -1,3 +1,8 @@
+from Task_1 import run_task1
+from Task_2 import run_task2
+from Task_3 import run_task3
+
+
 def run_task():
     print(f"What would you like to do?\n"
           f"[1] - Add a new place to stay\n"
@@ -8,15 +13,23 @@ def run_task():
           f"[6] - Exit")
     num = input()
     if num == '1':
-        print("What is the name of the place?")
-        name = str(input())
-        print("What type of place is it?")
-        place = str(input())
-        print("What is the postcode?")
-        address = str(input())
-        with open("data.csv", "a") as file:
-            file.write(f"\n{name},{place},{address}")
-        print(f"Added to file")
+        run_task1()
+        input("(Press Enter)")
+        run_task()
+    if num == '2':
+        run_task2()
+        input("(Press Enter)")
+        run_task()
+    if num == '3':
+        run_task3()
+        input("(Press Enter)")
+        run_task()
+    if num == '6':
+        print("Thank you")
+    else:
+        print("Input not recognised")
+        input("(Press Enter)")
+        run_task()
 
 
 run_task()
