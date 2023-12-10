@@ -1,6 +1,8 @@
 from Task_1 import run_task1
 from Task_2 import run_task2
 from Task_3 import run_task3
+from Task_4 import run_task4
+from Task_5 import run_task5
 
 
 def run_task():
@@ -22,6 +24,14 @@ def run_task():
         run_task()
     if num == '3':
         run_task3()
+        input("(Press Enter)")
+        run_task()
+    if num == '4':
+        run_task4()
+        input("(Press Enter)")
+        run_task()
+    if num == '5':
+        run_task5()
         input("(Press Enter)")
         run_task()
     if num == '6':

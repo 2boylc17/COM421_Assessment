@@ -6,5 +6,5 @@ def run_task1():
     print("What is the postcode?")
     address = str(input())
     with open("data.csv", "a") as file:
-        file.write(f"\n{name},{place},{address}")
+        file.write(f"\n{name},{place},{address},5")
     print(f"Added to file")

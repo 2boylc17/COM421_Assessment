@@ -2,9 +2,9 @@ import csv
 import math
 
 
-def run_task2():
+def run_task5():
 
-    print("What is the name of the place you would like to stay?")
+    print("What is the name of the place you would like to book?")
     searchvalue = str(input()).title()
 
     array = []
@@ -21,7 +21,9 @@ def run_task2():
         # print(start, end, middle)
         if newarr[middle][0] == searchvalue:
             print(f"{searchvalue} is a valid location")
-            print(newarr[middle])
+            print(newarr[middle][3])
+            newarr[middle][3] = newarr[middle][3] - 1
+            print(newarr[middle][3])
             found = True
         elif start == end:
             print(f"{searchvalue} is not a valid location")
