@@ -36,6 +36,7 @@ def run_task():
         run_task()
     if num == '6':
         print("Thank you")
+        exit()
     else:
         print("Input not recognised")
         input("(Press Enter)")
