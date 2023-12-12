@@ -1,6 +1,3 @@
-import csv
-
-
 def partition(data, start, end, num):
     i = start
     j = end
@@ -10,7 +7,7 @@ def partition(data, start, end, num):
             i += 1
         while data[j][num] > pivot:
             j -= 1
-        if i < j:
+        if i < j and data[i][num] != data[j][num]:
             temp = data[i]
             data[i] = data[j]
             data[j] = temp
@@ -28,14 +25,8 @@ def quicksort(data, start, end, num):
         quicksort(data, pivot + 1, end, num)
 
 
-def run_task3():
-    list1 = []
-    with open("data.csv") as file:
-        csv_reader = csv.reader(file)
-        headings = next(csv_reader)
-        for values in csv_reader:
-            list1.append(values)
-    quicksort(list1, 0, len(list1) - 1, 0)
-    for num in range(len(list1)):
-        print(list1[num])
+def run_task3(points_of_interest):
+    quicksort(points_of_interest, 0, len(points_of_interest) - 1, 0)
+    for num in range(len(points_of_interest)):
+        print(points_of_interest[num])
     # for loop used to print line by line
