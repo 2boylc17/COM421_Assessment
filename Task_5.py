@@ -15,9 +15,12 @@ def run_task5(points_of_interest):
         if points_of_interest[middle][0] == searchvalue:
             print(f"{searchvalue} is a valid location")
             avail = int(points_of_interest[middle][3])
-            points_of_interest[middle][3] = str(avail - 1)
-            print(f"New availability is {points_of_interest[middle][3]}")
-            print(points_of_interest)
+            if avail <= 0:
+                print(f"There is no room left")
+            else:
+                points_of_interest[middle][3] = str(avail - 1)
+                print(f"New availability is {points_of_interest[middle][3]}")
+                print(points_of_interest)
             found = True
         elif start == end:
             print(f"{searchvalue} is not a valid location")

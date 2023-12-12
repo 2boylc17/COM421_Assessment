@@ -31,6 +31,7 @@ class Queue:
     def __str__(self):
         return self.internalArray.__str__()
 
+
 def run_task7a(queries):
     print("What is your query?")
     new_query = str(input()).capitalize()

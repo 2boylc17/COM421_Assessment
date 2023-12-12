@@ -60,7 +60,10 @@ def run_task():
         with open("data.csv", "w") as new_file:
             new_file.write("name,type,location,availability\n")
             for num in range(len(points_of_interest)):
-                new_file.write(f"{points_of_interest[num][0]},{points_of_interest[num][1]},{points_of_interest[num][2]},{points_of_interest[num][3]}\n")
+                new_file.write(f"{points_of_interest[num][0]},"
+                               f"{points_of_interest[num][1]},"
+                               f"{points_of_interest[num][2]},"
+                               f"{points_of_interest[num][3]}\n")
         exit()
     else:
         print("Input not recognised")
