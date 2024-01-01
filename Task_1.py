@@ -9,4 +9,3 @@ def run_task1(points_of_interest):
     points_of_interest.append([name, place, address, "5"])
     print(points_of_interest, "after")
     print(f"Added to file")
-

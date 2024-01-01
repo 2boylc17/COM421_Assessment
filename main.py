@@ -12,6 +12,8 @@ with open("data.csv", "r") as file:
     next(csv_reader)
     for values in csv_reader:
         points_of_interest.append(values)
+
+
 queries = Queue(10)
 
 
